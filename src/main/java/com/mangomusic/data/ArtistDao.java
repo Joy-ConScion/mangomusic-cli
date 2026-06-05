@@ -41,6 +41,8 @@ public class ArtistDao {
 
                     artists.add(new Artist(artistId, name, genre, formedYear));
                 }
+            }catch (SQLException e){
+                System.out.println("Error");
             }
 
         } catch (SQLException e) {
