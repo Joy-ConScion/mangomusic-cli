@@ -42,11 +42,12 @@ public class ArtistDao {
                     artists.add(new Artist(artistId, name, genre, formedYear));
                 }
             }catch (SQLException e){
-                System.out.println("Error");
+                System.out.println("Error with artist search: " + e.getMessage());
+                e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            System.err.println("Error searching for artists: " + e.getMessage());
+            System.err.println("Error data connection: " + e.getMessage());
             e.printStackTrace();
         }
 
